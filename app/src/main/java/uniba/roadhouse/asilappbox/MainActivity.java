@@ -2,7 +2,9 @@ package uniba.roadhouse.asilappbox;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.res.Configuration;
 import android.graphics.Color;
+import android.graphics.drawable.Icon;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.MotionEvent;
@@ -29,9 +31,37 @@ public class MainActivity extends AppCompatActivity {
         // Riferimento agli ImageButton
         getImageButtonReferences();
 
+        // Aggiornamento icone a seconda delle impostazioni utente
+        switch (getResources().getConfiguration().uiMode & Configuration.UI_MODE_NIGHT_MASK) {
+            case Configuration.UI_MODE_NIGHT_YES:
+                setNightModeButtonIcons();
+                break;
+            case Configuration.UI_MODE_NIGHT_NO:
+                setBaseButtonIcons();
+                break;
+        }
+
         // Aggiunta dei Listener
         addImageButtonListeners();
 
+    }
+
+    private void setNightModeButtonIcons() {
+        TEMPERATURE_BTN.setImageResource(R.drawable.temp_icon_night);
+        CARDIO_BTN.setImageResource(R.drawable.heart_icon_night);
+        STRESS_BTN.setImageResource(R.drawable.parkinson_icon_night);
+        EYE_BTN.setImageResource(R.drawable.eye_icon_night);
+        SCALE_BTN.setImageResource(R.drawable.scale_icon_night);
+        GLUCOMETER_BTN.setImageResource(R.drawable.glucometer_icon_night);
+    }
+
+    private void setBaseButtonIcons() {
+        TEMPERATURE_BTN.setImageResource(R.drawable.temp_icon);
+        CARDIO_BTN.setImageResource(R.drawable.heart_icon);
+        STRESS_BTN.setImageResource(R.drawable.parkinson_icon);
+        EYE_BTN.setImageResource(R.drawable.eye_icon);
+        SCALE_BTN.setImageResource(R.drawable.scale_icon);
+        GLUCOMETER_BTN.setImageResource(R.drawable.glucometer_icon);
     }
 
     private void getImageButtonReferences(){
