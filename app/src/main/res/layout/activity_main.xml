@@ -25,9 +25,8 @@
                 android:layout_weight="1"
                 android:backgroundTint="@android:color/transparent"
                 android:backgroundTintMode="src_over"
-                android:src="@drawable/temp_icon"
                 android:clickable="true"
-                android:foreground="?android:attr/selectableItemBackground"/>
+                android:src="@drawable/temp_icon" />
 
             <ImageButton
                 android:id="@+id/cardio_btn"
