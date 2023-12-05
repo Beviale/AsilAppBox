@@ -24,7 +24,6 @@
                 android:layout_height="200dp"
                 android:layout_weight="1"
                 android:backgroundTint="@android:color/transparent"
-                android:backgroundTintMode="src_over"
                 android:clickable="true"
                 android:src="@drawable/temp_icon" />
 
