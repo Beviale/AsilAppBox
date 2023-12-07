@@ -6,12 +6,19 @@ import android.os.Bundle;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
 
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageButton;
+
+import java.util.HashMap;
+import java.util.Map;
+
+import javax.microedition.khronos.opengles.GL;
 
 import uniba.roadhouse.asilappbox.R;
 
@@ -22,13 +29,14 @@ import uniba.roadhouse.asilappbox.R;
  */
 public class MainPageFragment extends Fragment {
 
-    // VARIABILI BOTTONI
-    private ImageButton TEMPERATURE_BTN;
-    private ImageButton CARDIO_BTN;
-    private ImageButton STRESS_BTN;
-    private ImageButton EYE_BTN;
-    private ImageButton SCALE_BTN;
-    private ImageButton GLUCOMETER_BTN;
+    private Map<String, Class> toolScreenFragments;
+
+    private final String TEMPERATURE_SCREEN = "Temperature";
+    private final String CARDIO_SCREEN = "Cardio";
+    private final String STRESS_SCREEN = "Stress";
+    private final String EYE_SCREEN = "Eye";
+    private final String SCALE_SCREEN = "Scale";
+    private final String GLUCOMETER_SCREEN = "Glucometer";
 
     public MainPageFragment() {
         // Required empty public constructor
@@ -62,19 +70,14 @@ public class MainPageFragment extends Fragment {
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
-        // Riferimento agli ImageButton
-        getImageButtonReferences();
-        /*
-        // Aggiornamento icone a seconda delle impostazioni utente
-        switch (getResources().getConfiguration().uiMode & Configuration.UI_MODE_NIGHT_MASK) {
-            case Configuration.UI_MODE_NIGHT_YES:
-                setNightModeButtonIcons();
-                break;
-            case Configuration.UI_MODE_NIGHT_NO:
-                setBaseButtonIcons();
-                break;
-        }
-        */
+        toolScreenFragments = new HashMap<String, Class>(){{
+            put(TEMPERATURE_SCREEN, TempFragment.class);
+            put(CARDIO_SCREEN, CardioFragment.class);
+            put(STRESS_SCREEN, StressFragment.class);
+            put(SCALE_SCREEN, ScaleFragment.class);
+            put(GLUCOMETER_SCREEN, GlucometerFragment.class);
+        }};
+
     }
 
     @Override
@@ -82,7 +85,7 @@ public class MainPageFragment extends Fragment {
         super.onStart();
 
         // Aggiunta dei Listener
-        addImageButtonListeners();
+        setButtonListeners();
     }
 
     @Override
@@ -92,56 +95,22 @@ public class MainPageFragment extends Fragment {
         return inflater.inflate(R.layout.fragment_main_page, container, false);
     }
 
-    private void setNightModeButtonIcons() {
-        TEMPERATURE_BTN.setImageResource(R.drawable.temp_icon_night);
-        CARDIO_BTN.setImageResource(R.drawable.heart_icon_night);
-        STRESS_BTN.setImageResource(R.drawable.parkinson_icon_night);
-        EYE_BTN.setImageResource(R.drawable.eye_icon_night);
-        SCALE_BTN.setImageResource(R.drawable.scale_icon_night);
-        GLUCOMETER_BTN.setImageResource(R.drawable.glucometer_icon_night);
+    private void setButtonListeners(){
+        getView().findViewById(R.id.temperature_btn).setOnClickListener(v -> changeScreen(this.TEMPERATURE_SCREEN));
+        getView().findViewById(R.id.cardio_btn).setOnClickListener(v -> changeScreen(this.CARDIO_SCREEN));
+        getView().findViewById(R.id.stress_btn).setOnClickListener(v -> changeScreen(this.STRESS_SCREEN));
+        //getView().findViewById(R.id.eye_btn).setOnClickListener(v -> changeScreen(this.EYE_SCREEN));
+        getView().findViewById(R.id.scale_btn).setOnClickListener(v -> changeScreen(this.SCALE_SCREEN));
+        getView().findViewById(R.id.glucometer_btn).setOnClickListener(v -> changeScreen(this.GLUCOMETER_SCREEN));
     }
 
-    private void setBaseButtonIcons() {
-        TEMPERATURE_BTN.setImageResource(R.drawable.temp_icon);
-        CARDIO_BTN.setImageResource(R.drawable.heart_icon);
-        STRESS_BTN.setImageResource(R.drawable.parkinson_icon);
-        EYE_BTN.setImageResource(R.drawable.eye_icon);
-        SCALE_BTN.setImageResource(R.drawable.scale_icon);
-        GLUCOMETER_BTN.setImageResource(R.drawable.glucometer_icon);
-    }
+    private void changeScreen(String screen) {
+        FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
 
-    private void getImageButtonReferences(){
-        TEMPERATURE_BTN = getView().findViewById(R.id.temperature_btn);
-        CARDIO_BTN = getView().findViewById(R.id.cardio_btn);
-        STRESS_BTN = getView().findViewById(R.id.stress_btn);
-        EYE_BTN = getView().findViewById(R.id.eye_btn);
-        SCALE_BTN = getView().findViewById(R.id.scale_btn);
-        GLUCOMETER_BTN = getView().findViewById(R.id.glucometer_btn);
-    }
-
-    private void addImageButtonListeners() {
-        TEMPERATURE_BTN.setOnClickListener(v -> {
-            Log.d("TEMP_BTN", "temp pressed");
-        });
-
-        CARDIO_BTN.setOnClickListener(v -> {
-            Log.d("CARDIO_BTN", "cardio pressed");
-        });
-
-        STRESS_BTN.setOnClickListener(v -> {
-            Log.d("STRESS_BTN", "stress pressed");
-        });
-
-        EYE_BTN.setOnClickListener(v -> {
-            Log.d("EYE_BTN", "eye pressed");
-        });
-
-        SCALE_BTN.setOnClickListener(v -> {
-            Log.d("SCALE_BTN", "scale pressed");
-        });
-
-        GLUCOMETER_BTN.setOnClickListener(v -> {
-            Log.d("GLUCOMETER_BTN", "glucometer pressed");
-        });
+        //apro il fragment che inidca il tool selezionato
+        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+        fragmentTransaction.replace(R.id.main_fragment_container, toolScreenFragments.get(screen), null);
+        fragmentTransaction.addToBackStack(screen);
+        fragmentTransaction.commit();
     }
 }

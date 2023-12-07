@@ -1,10 +1,44 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.fragment.app.FragmentContainerView
-    android:id="@+id/main_fragment_container"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
+<LinearLayout android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
     xmlns:android="http://schemas.android.com/apk/res/android">
 
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolBarHome"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/appBarColor"
+        android:minHeight="@dimen/abbBarHeight"
+        android:elevation="2dp"
+        android:pointerIcon="context_menu"
+        android:theme="?attr/actionBarTheme">
 
+        <ImageView
+            android:id="@+id/toolBarIconHomeActivity"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="10dp"
+            android:layout_gravity="left"
+            android:src="@mipmap/ic_launcher_round"/>
 
-</androidx.fragment.app.FragmentContainerView>
+        <TextView
+            android:id="@+id/homeScreenTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="25dp"
+            android:fontFamily="@font/titillium_web_bold"
+            android:text="@string/homeMenuScreen"
+            android:textColor="@color/white"
+            android:textSize="@dimen/title2FontSize" />
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/main_fragment_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </androidx.fragment.app.FragmentContainerView>
+
+</LinearLayout>

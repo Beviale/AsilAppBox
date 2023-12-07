@@ -1,5 +1,13 @@
 <resources>
     <string name="app_name">AsilAppBox</string>
     <!-- TODO: Remove or change this placeholder text -->
+    <string name="homeMenuScreen">AsilApp Box</string>
+    <string name="glucometer">Glucometer</string>
+    <string name="scale">Scale</string>
+    <string name="eye">Eye Meter</string>
+    <string name="stress">Stress Meter</string>
+    <string name="cardio">Cardiometer</string>
+    <string name="temperature">Thermometer</string>
+    <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

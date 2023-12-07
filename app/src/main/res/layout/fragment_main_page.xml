@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_margin="25dp"
+    android:layout_margin="15dp"
     xmlns:android="http://schemas.android.com/apk/res/android">
 
         <LinearLayout
@@ -14,85 +14,276 @@
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
+                android:layout_height="200dp"
                 android:orientation="horizontal">
 
-                <ImageButton
+                <androidx.constraintlayout.widget.ConstraintLayout
                     android:id="@+id/temperature_btn"
-                    android:layout_width="wrap_content"
-                    android:layout_height="200dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="5dp"
+                    android:padding="5dp"
+                    android:clipToPadding="false"
                     android:layout_weight="1"
-                    android:backgroundTint="@android:color/transparent"
                     android:clickable="true"
-                    android:foreground="?android:attr/selectableItemBackground"
-                    android:src="@drawable/temp_icon" />
+                    android:foreground="?android:attr/selectableItemBackground">
 
-                <ImageButton
+                    <ImageView
+                        android:id="@+id/temperature_icon_bg"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/rounded"
+                        android:backgroundTint="@color/appMainColorDark"
+                        android:elevation="5dp"
+                        tools:layout_editor_absoluteX="5dp"
+                        tools:layout_editor_absoluteY="5dp" />
+                    <ImageView
+                        android:id="@+id/temperature_icon"
+                        android:src="@mipmap/temp_icon_night"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:elevation="5dp"/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="-30dp"
+                        android:elevation="5dp"
+                        android:text="@string/temperature"
+                        android:textAlignment="center"
+                        android:textColor="@color/white"
+                        android:textStyle="bold"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/temperature_icon_bg" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                <androidx.constraintlayout.widget.ConstraintLayout
                     android:id="@+id/cardio_btn"
-                    android:layout_width="wrap_content"
-                    android:layout_height="200dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="5dp"
+                    android:padding="5dp"
+                    android:clipToPadding="false"
                     android:layout_weight="1"
-                    android:backgroundTint="@android:color/transparent"
                     android:clickable="true"
-                    android:foreground="?android:attr/selectableItemBackground"
-                    android:src="@drawable/heart_icon" />
+                    android:foreground="?android:attr/selectableItemBackground">
+
+                    <ImageView
+                        android:id="@+id/cardio_icon_bg"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/rounded"
+                        android:backgroundTint="@color/appMainColorDark"
+                        android:elevation="5dp"
+                        tools:layout_editor_absoluteX="5dp"
+                        tools:layout_editor_absoluteY="5dp" />
+                    <ImageView
+                        android:id="@+id/cardio_icon"
+                        android:src="@mipmap/heart_icon_night"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:elevation="5dp"/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="-30dp"
+                        android:elevation="5dp"
+                        android:text="@string/cardio"
+                        android:textAlignment="center"
+                        android:textColor="@color/white"
+                        android:textStyle="bold"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/cardio_icon_bg" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
 
             </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
+                android:layout_height="200dp"
                 android:orientation="horizontal">
 
-                <ImageButton
+                <androidx.constraintlayout.widget.ConstraintLayout
                     android:id="@+id/stress_btn"
-                    android:layout_width="wrap_content"
-                    android:layout_height="200dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="5dp"
+                    android:padding="5dp"
+                    android:clipToPadding="false"
                     android:layout_weight="1"
-                    android:backgroundTint="@android:color/transparent"
                     android:clickable="true"
-                    android:foreground="?android:attr/selectableItemBackground"
-                    android:src="@drawable/parkinson_icon" />
+                    android:foreground="?android:attr/selectableItemBackground">
 
-                <ImageButton
+                    <ImageView
+                        android:id="@+id/stress_icon_bg"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/rounded"
+                        android:backgroundTint="@color/appMainColorDark"
+                        android:elevation="5dp"
+                        tools:layout_editor_absoluteX="5dp"
+                        tools:layout_editor_absoluteY="5dp" />
+                    <ImageView
+                        android:id="@+id/stress_icon"
+                        android:src="@mipmap/parkinson_icon_night"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:elevation="5dp"/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="-30dp"
+                        android:elevation="5dp"
+                        android:text="@string/stress"
+                        android:textAlignment="center"
+                        android:textColor="@color/white"
+                        android:textStyle="bold"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/stress_icon_bg" />
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                <androidx.constraintlayout.widget.ConstraintLayout
                     android:id="@+id/eye_btn"
-                    android:layout_width="wrap_content"
-                    android:layout_height="200dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="5dp"
+                    android:padding="5dp"
+                    android:clipToPadding="false"
                     android:layout_weight="1"
-                    android:backgroundTint="@android:color/transparent"
                     android:clickable="true"
-                    android:foreground="?android:attr/selectableItemBackground"
-                    android:src="@drawable/eye_icon" />
+                    android:foreground="?android:attr/selectableItemBackground">
+
+                    <ImageView
+                        android:id="@+id/eye_icon_bg"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/rounded"
+                        android:backgroundTint="@color/appMainColorDark"
+                        android:elevation="5dp"
+                        tools:layout_editor_absoluteX="5dp"
+                        tools:layout_editor_absoluteY="5dp" />
+                    <ImageView
+                        android:id="@+id/eye_icon"
+                        android:src="@mipmap/eye_icon_night"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:elevation="5dp"/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="-30dp"
+                        android:elevation="5dp"
+                        android:text="@string/eye"
+                        android:textAlignment="center"
+                        android:textColor="@color/white"
+                        android:textStyle="bold"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/eye_icon_bg" />
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
 
             </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
+                android:layout_height="200dp"
                 android:orientation="horizontal">
 
-                <ImageButton
+                <androidx.constraintlayout.widget.ConstraintLayout
                     android:id="@+id/scale_btn"
-                    android:layout_width="wrap_content"
-                    android:layout_height="200dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="5dp"
+                    android:padding="5dp"
+                    android:clipToPadding="false"
                     android:layout_weight="1"
-                    android:backgroundTint="@android:color/transparent"
                     android:clickable="true"
-                    android:foreground="?android:attr/selectableItemBackground"
-                    android:src="@drawable/scale_icon" />
+                    android:foreground="?android:attr/selectableItemBackground">
 
-                <ImageButton
+                    <ImageView
+                        android:id="@+id/scale_icon_bg"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/rounded"
+                        android:backgroundTint="@color/appMainColorDark"
+                        android:elevation="5dp"
+                        tools:layout_editor_absoluteX="5dp"
+                        tools:layout_editor_absoluteY="5dp" />
+                    <ImageView
+                        android:id="@+id/scale_icon"
+                        android:src="@mipmap/scale_icon"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:elevation="5dp"/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="-30dp"
+                        android:elevation="5dp"
+                        android:text="@string/scale"
+                        android:textAlignment="center"
+                        android:textColor="@color/white"
+                        android:textStyle="bold"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/scale_icon_bg" />
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
                     android:id="@+id/glucometer_btn"
-                    android:layout_width="wrap_content"
-                    android:layout_height="200dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="5dp"
                     android:layout_weight="1"
-                    android:backgroundTint="@android:color/transparent"
+                    android:clipToPadding="false"
+                    android:padding="5dp"
                     android:clickable="true"
-                    android:foreground="?android:attr/selectableItemBackground"
-                    android:src="@drawable/glucometer_icon" />
+                    android:foreground="?android:attr/selectableItemBackground">
+
+                    <ImageView
+                        android:id="@+id/glucometer_icon_bg"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/rounded"
+                        android:backgroundTint="@color/appMainColorDark"
+                        android:elevation="5dp"
+                        tools:layout_editor_absoluteX="5dp"
+                        tools:layout_editor_absoluteY="5dp" />
+                    <ImageView
+                        android:id="@+id/glucometer_icon"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:elevation="5dp"
+                        android:src="@mipmap/glucometer_icon" />
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="-30dp"
+                        android:elevation="5dp"
+                        android:text="@string/glucometer"
+                        android:textAlignment="center"
+                        android:textColor="@color/white"
+                        android:textStyle="bold"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/glucometer_icon_bg" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
             </LinearLayout>
 
         </LinearLayout>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--APP BAR-->
+    <dimen name="abbBarHeight">80dp</dimen>
+    <dimen name="iconAppBarDown">40dp</dimen>
+
+    <!--TEXT-->
+    <dimen name="title1FontSize">40dp</dimen>
+    <dimen name="title2FontSize">35dp</dimen>
+    <dimen name="title3FontSize">15dp</dimen>
+    <dimen name="textInputFontSize">18dp</dimen>
+
+    <!--BUTTONS-->
+    <dimen name="buttonsLoginWidth">300dp</dimen>
+    <dimen name="buttonsLoginHeight">50dp</dimen>
+
+    <!--INPUTS TEXTS-->
+    <dimen name="inputTextWidth">300dp</dimen>
+    <dimen name="inpuTextHeight">60dp</dimen>
+
+    <!--MARGIN-->
+    <dimen name="marginBetweenInputs">20dp</dimen>
+
+    <!--PROGRESS BAR-->
+    <dimen name="progressBarDim">70dp</dimen>
+
+    <!--MedicalParameters-->
+    <dimen name="heightHealthHistory">100dp</dimen>
+    <dimen name="marginHealthHistory">24dp</dimen>
+    <dimen name="textTitleHealthHistory">18dp</dimen>
+    <dimen name="resultUnityHealthHistory">13dp</dimen>
+    <dimen name="marginTopHealthHistory">20dp</dimen>
+    <dimen name="resultHealthHistory">50dp</dimen>
+    <dimen name="resultMaxPressureHealthHistory">30dp</dimen>
+    <dimen name="resultMinPressureHealthHistory">25dp</dimen>
+    <dimen name="textDetailHealthHistoryTitle">35dp</dimen>
+    <dimen name="valueDetailHealthHistory">16dp</dimen>
+    <dimen name ="textSizeDoctorNotes">14dp</dimen>
+    <dimen name="marginLeftRightDetailHealthHistory">20dp</dimen>
+
+
+
+</resources>
