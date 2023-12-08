@@ -1,38 +1,51 @@
 package uniba.roadhouse.asilappbox;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatDelegate;
+import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
-
-import android.content.res.Configuration;
-import android.graphics.Color;
-import android.graphics.drawable.Icon;
 import android.os.Bundle;
-import android.util.Log;
-import android.view.MotionEvent;
-import android.widget.ImageButton;
-
 import uniba.roadhouse.asilappbox.fragments.MainPageFragment;
-import uniba.roadhouse.asilappbox.fragments.TempFragment;
 
 public class MainActivity extends AppCompatActivity {
 
-    private FragmentManager fragmentManager;
+    public static MainActivity Instance;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
         setContentView(R.layout.activity_main);
 
-        fragmentManager = getSupportFragmentManager();
-        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-        fragmentTransaction.replace(R.id.main_fragment_container, MainPageFragment.class, null);
-        fragmentTransaction.commit();
+        Instance = this;
+        this.changeScreen(R.id.main_fragment_container, MainPageFragment.class);
     }
 
     @Override
     protected void onStart() {
         super.onStart();
+    }
+
+    public void changeScreen(int fragmentContainer, Class<? extends Fragment> newFragment, boolean addToBackStack) {
+        FragmentManager fragmentManager = getSupportFragmentManager();
+
+        //apro il fragment indicato
+        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+        fragmentTransaction.replace(fragmentContainer, newFragment, null);
+        if(addToBackStack)
+            fragmentTransaction.addToBackStack(null);
+        fragmentTransaction.commit();
+    }
+
+    public void changeScreen(int fragmentContainer, Class<? extends Fragment> newFragment) {
+        FragmentManager fragmentManager = getSupportFragmentManager();
+
+        //apro il fragment indicato
+        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+        fragmentTransaction.replace(fragmentContainer, newFragment, null);
+        fragmentTransaction.addToBackStack(null);
+        fragmentTransaction.commit();
     }
 
 }

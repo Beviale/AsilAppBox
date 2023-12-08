@@ -1,6 +1,5 @@
 package uniba.roadhouse.asilappbox.fragments;
 
-import android.content.res.Configuration;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -9,18 +8,16 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageButton;
 
 import java.util.HashMap;
 import java.util.Map;
 
-import javax.microedition.khronos.opengles.GL;
-
+import uniba.roadhouse.asilappbox.MainActivity;
 import uniba.roadhouse.asilappbox.R;
+import uniba.roadhouse.asilappbox.fragments.stresstest.StressFragment;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -105,12 +102,9 @@ public class MainPageFragment extends Fragment {
     }
 
     private void changeScreen(String screen) {
-        FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
-
-        //apro il fragment che inidca il tool selezionato
-        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-        fragmentTransaction.replace(R.id.main_fragment_container, toolScreenFragments.get(screen), null);
-        fragmentTransaction.addToBackStack(screen);
-        fragmentTransaction.commit();
+        if(MainActivity.Instance != null){
+            MainActivity.Instance.changeScreen(R.id.main_fragment_container, toolScreenFragments.get(screen));
+        }
     }
+
 }
