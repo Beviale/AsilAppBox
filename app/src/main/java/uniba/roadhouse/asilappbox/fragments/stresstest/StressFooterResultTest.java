@@ -65,7 +65,7 @@ public class StressFooterResultTest extends Fragment {
 
     private void changeScreen(){
         if(MainActivity.Instance != null){
-            MainActivity.Instance.changeScreen(R.id.stress_test_footer_fragment, StressFooterRunTest.class, false);
+            MainActivity.Instance.changeScreen(R.id.test_footer_fragment, StressFooterRunTest.class, false);
         }
     }
 }

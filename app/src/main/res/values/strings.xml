@@ -14,4 +14,6 @@
     <string name="stressTestRunningButtonLable">Stress Test Running...</string>
     <string name="confirmTestResultButtonLabel">Send Result</string>
     <string name="cancelTestResultButtonLabel">Retake Test</string>
+    <string name="tempToolTitle">Thermometer</string>
+    <string name="tempToolDesc">Questa è la descrizione della termometro, utile a misurare la temperatura corporea di una persona</string>
 </resources>

@@ -1,27 +1,14 @@
 package uniba.roadhouse.asilappbox.fragments.stresstest;
 
-import android.animation.ValueAnimator;
-import android.content.Context;
-import android.hardware.Sensor;
-import android.hardware.SensorEvent;
-import android.hardware.SensorEventListener;
-import android.hardware.SensorManager;
 import android.os.Bundle;
 
-import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentManager;
-import androidx.fragment.app.FragmentTransaction;
 
-import android.os.Handler;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
 import android.widget.ProgressBar;
-import android.widget.Toast;
-import java.util.ArrayList;
 
 import uniba.roadhouse.asilappbox.MainActivity;
 import uniba.roadhouse.asilappbox.R;
@@ -79,7 +66,7 @@ public class StressFragment extends Fragment{
         TEST_PROGRESS_BAR = getView().findViewById(R.id.test_progress_bar);
 
         if(MainActivity.Instance != null){
-            MainActivity.Instance.changeScreen(R.id.stress_test_footer_fragment, StressFooterRunTest.class, false);
+            MainActivity.Instance.changeScreen(R.id.test_footer_fragment, StressFooterRunTest.class, false);
         }
 
     }

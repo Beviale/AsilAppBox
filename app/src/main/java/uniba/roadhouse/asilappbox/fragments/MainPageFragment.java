@@ -5,8 +5,6 @@ import android.os.Bundle;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentManager;
-import androidx.fragment.app.FragmentTransaction;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -18,6 +16,7 @@ import java.util.Map;
 import uniba.roadhouse.asilappbox.MainActivity;
 import uniba.roadhouse.asilappbox.R;
 import uniba.roadhouse.asilappbox.fragments.stresstest.StressFragment;
+import uniba.roadhouse.asilappbox.fragments.thermometertest.TempFragment;
 
 /**
  * A simple {@link Fragment} subclass.

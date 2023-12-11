@@ -129,7 +129,7 @@
                         tools:layout_editor_absoluteX="5dp"
                         tools:layout_editor_absoluteY="5dp" />
                     <ImageView
-                        android:id="@+id/stress_icon"
+                        android:id="@+id/iconHolder"
                         android:src="@mipmap/parkinson_icon"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"

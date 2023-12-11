@@ -8,7 +8,6 @@ import android.hardware.SensorEventListener;
 import android.hardware.SensorManager;
 import android.os.Bundle;
 
-import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
@@ -62,7 +61,7 @@ public class StressFooterRunTest extends Fragment implements SensorEventListener
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_stress_footer_run_test, container, false);
+        return inflater.inflate(R.layout.fragment_test_footer_run, container, false);
     }
 
     @Override
@@ -130,7 +129,7 @@ public class StressFooterRunTest extends Fragment implements SensorEventListener
 
     private void changeScreen(){
         if(MainActivity.Instance != null){
-            MainActivity.Instance.changeScreen(R.id.stress_test_footer_fragment, StressFooterResultTest.class);
+            MainActivity.Instance.changeScreen(R.id.test_footer_fragment, StressFooterResultTest.class);
         }
     }
 
