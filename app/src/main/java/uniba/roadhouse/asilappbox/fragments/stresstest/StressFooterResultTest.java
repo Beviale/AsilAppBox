@@ -43,7 +43,7 @@ public class StressFooterResultTest extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_stress_footer_result_test, container, false);
+        return inflater.inflate(R.layout.fragment_test_footer_result, container, false);
     }
 
     @Override
@@ -55,7 +55,7 @@ public class StressFooterResultTest extends Fragment {
         CANCEL_BUTTON = getView().findViewById(R.id.cancel_result_button);
 
         CONFIRM_BUTTON.setOnClickListener(v -> sendResult(StressFragment.stressLevel));
-        CANCEL_BUTTON.setOnClickListener(v -> changeScreen());
+        CANCEL_BUTTON.setOnClickListener(v -> MainActivity.Instance.popFragmentFromBackStack());
 
     }
 
@@ -63,9 +63,4 @@ public class StressFooterResultTest extends Fragment {
         return stressLevel;
     }
 
-    private void changeScreen(){
-        if(MainActivity.Instance != null){
-            MainActivity.Instance.changeScreen(R.id.test_footer_fragment, StressFooterRunTest.class, false);
-        }
-    }
 }

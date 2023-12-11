@@ -69,7 +69,7 @@ public class TempFooterRunTest extends Fragment implements SensorEventListener {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_temp_footer_run_test, container, false);
+        return inflater.inflate(R.layout.fragment_test_footer_run, container, false);
     }
 
     @Override

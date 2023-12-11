@@ -2,6 +2,7 @@ package uniba.roadhouse.asilappbox.fragments.stresstest;
 
 import android.animation.ValueAnimator;
 import android.content.Context;
+import android.content.pm.PackageManager;
 import android.hardware.Sensor;
 import android.hardware.SensorEvent;
 import android.hardware.SensorEventListener;
@@ -12,6 +13,8 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
 import android.os.Handler;
+import android.os.VibrationEffect;
+import android.os.Vibrator;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -83,6 +86,10 @@ public class StressFooterRunTest extends Fragment implements SensorEventListener
                 sensorManager.unregisterListener(listener);
                 StressFragment.TEST_PROGRESS_BAR.setVisibility(View.INVISIBLE);
                 calculateTestResult();
+
+                Vibrator vibrator = (Vibrator) getActivity().getSystemService(Context.VIBRATOR_SERVICE);
+                vibrator.vibrate(VibrationEffect.createOneShot(100, VibrationEffect.DEFAULT_AMPLITUDE));
+
                 changeScreen();
             }, TEST_DURATION_IN_MS);
 
@@ -93,7 +100,7 @@ public class StressFooterRunTest extends Fragment implements SensorEventListener
             animator.start();
 
             RUN_TEST_BUTTON.setEnabled(false);
-            RUN_TEST_BUTTON.setText(R.string.stressTestRunningButtonLable);
+            RUN_TEST_BUTTON.setText(R.string.testRunningButtonLable);
 
         });
 
@@ -101,7 +108,7 @@ public class StressFooterRunTest extends Fragment implements SensorEventListener
 
     private void resetRunTestButton(){
         RUN_TEST_BUTTON.setVisibility(View.VISIBLE);
-        RUN_TEST_BUTTON.setText(R.string.runStressTestButtonLabel);
+        RUN_TEST_BUTTON.setText(R.string.runTestButtonLabel);
         RUN_TEST_BUTTON.setEnabled(true);
     }
 
