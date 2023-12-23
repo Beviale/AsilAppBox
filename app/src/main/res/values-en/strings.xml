@@ -1,0 +1,63 @@
+<resources>
+    <string name="app_name">AsilAppBox</string>
+    <string name="homeMenuScreen">AsilApp Box</string>
+
+    <!-- STRUMENTISTICA & DESCRIZIONI -->
+    <string name="glucose">Glucometer</string>
+    <string name="weight">Scale</string>
+    <string name="bpm">BPM test</string>
+    <string name="trembling">Trembling</string>
+    <string name="bloodPressure">Blood Pressure</string>
+    <string name="temperature">Thermometer</string>
+
+    <string name="glucoseDescription">
+        The following test aims at measuring the glucose level in the bloodstream (simulated).
+        Before continuing on with the test we please ask you to correctly wear the tools provided inside the box.
+        After exactly 5 seconds from the start of the test you will feels a light vibration that will indicate the end of the test. You can also verify the test progress from the progress bar that will appear once you run the test.
+        If you notice that you made an involuntary movement that compromised the test we invite you to re-run it before sending the results to the main application.
+    </string>
+    <string name="weightDescription">
+        The following test aims at measuring the body weight of the patient (simulated).
+        Before continuing on with the test we please ask you to undress yourself and/or avoid wearing shoes or heavy garment that can influence the accuraty of the result.
+        After exactly 5 seconds from the start of the test you will feels a light vibration that will indicate the end of the test. You can also verify the test progress from the progress bar that will appear once you run the test.
+        If you notice that you made an involuntary movement that compromised the test we invite you to re-run it before sending the results to the main application.
+    </string>
+    <string name="bpmDescription">
+        The following test aims at measuring the beats per minute of the patient (simulated).
+        Before continuing on with the test we please ask you to correctly wear the tools provided inside the box and to avoid sharp movements.
+        After exactly 5 seconds from the start of the test you will feels a light vibration that will indicate the end of the test. You can also verify the test progress from the progress bar that will appear once you run the test.
+        If you notice that you made an involuntary movement that compromised the test we invite you to re-run it before sending the results to the main application.
+    </string>
+    <string name="tremblingDescription">
+        The following test aims at verifying the stress/shock status of the patient measuring the avility to hold the device still.
+        After pressing the run test button we please ask you to keep the device in your hand and try, as much as possible, to hold it still.
+        After exactly 5 seconds from the start of the test you will feels a light vibration that will indicate the end of the test. You can also verify the test progress from the progress bar that will appear once you run the test.
+        If you notice that you made an involuntary movement that compromised the test we invite you to re-run it before sending the results to the main application.
+    </string>
+    <string name="bloodPressureDescription">
+        The following test aims at measuring the systolic (maximum) and diastolic (minimum) blood pressure of the patient (simulated).
+        Before continuing on with the test we please ask you to correctly wear the tools provided inside the mox and to avoid sharp movements.
+        After exactly 5 seconds from the start of the test you will feels a light vibration that will indicate the end of the test. You can also verify the test progress from the progress bar that will appear once you run the test.
+        If you notice that you made an involuntary movement that compromised the test we invite you to re-run it before sending the results to the main application.
+    </string>
+    <string name="temperatureDescription">#TO-DO di Simone</string>
+
+    <string name="resultSentMsg">Results sent to client</string>
+
+    <!-- BOTTONI -->
+    <string name="closeBox">Close the box</string>
+    <string name="runTestButtonLabel">Run Test</string>
+    <string name="testRunningButtonLable">Test in progress...</string>
+    <string name="confirmTestResultButtonLabel">Send Data</string>
+    <string name="cancelTestResultButtonLabel">Retake Test</string>
+    <string name="waitingForClient">Waiting for a client...</string>
+
+    <!-- PERMISSIONS -->
+    <string name="permission_needed">Permissions needed</string>
+    <string name="bt_permission_rationale">
+        Bluetooth is necessary to connect AsilApp to AsilAppBox.
+        Denying this permission will not grant access to the tools included in this App and therefore terminate it.
+        Only client confirmed data will be sent to the connected device.
+    </string>
+
+</resources>
