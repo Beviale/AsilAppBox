@@ -1,4 +1,4 @@
-package uniba.roadhouse.asilappbox.fragments.stresstest;
+package uniba.roadhouse.asilappbox.fragments.bpm;
 
 import android.os.Bundle;
 
@@ -16,24 +16,17 @@ import android.widget.TextView;
 
 import uniba.roadhouse.asilappbox.MainActivity;
 import uniba.roadhouse.asilappbox.R;
+import uniba.roadhouse.asilappbox.fragments.BaseFragment;
 
 /**
  * A simple {@link Fragment} subclass.
- * Use the {@link StressFragment#newInstance} factory method to
+ * Use the {@link BpmFragmentMain#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class StressFragment extends Fragment{
-
-    public enum StressLevel {
-        NORMAL,
-        HIGH,
-        EXTREME
-    }
-
+public class BpmFragmentMain extends BaseFragment {
     protected static ProgressBar TEST_PROGRESS_BAR;
-    protected static StressLevel stressLevel = null;
 
-    public StressFragment() {
+    public BpmFragmentMain() {
         // Required empty public constructor
     }
 
@@ -41,19 +34,14 @@ public class StressFragment extends Fragment{
      * Use this factory method to create a new instance of
      * this fragment using the provided parameters.
      *
-     * @return A new instance of fragment StressFragment.
+     * @return A new instance of fragment CardioFragment.
      */
     // TODO: Rename and change types and number of parameters
-    public static StressFragment newInstance() {
-        StressFragment fragment = new StressFragment();
+    public static BpmFragmentMain newInstance() {
+        BpmFragmentMain fragment = new BpmFragmentMain();
         Bundle args = new Bundle();
         fragment.setArguments(args);
         return fragment;
-    }
-
-    @Override
-    public void onCreate(@Nullable Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
     }
 
     @Override
@@ -69,22 +57,21 @@ public class StressFragment extends Fragment{
         setFragmentContent();
     }
 
-    private void setFragmentContent(){
-        ((TextView)getActivity().findViewById(R.id.testTitle)).setText(R.string.stressToolTitle);
-        ((ImageView)getActivity().findViewById(R.id.iconHolder)).setImageResource(R.mipmap.parkinson_icon);
-        ((EditText)getActivity().findViewById(R.id.testDescription)).setText(R.string.stressToolDesc);
+    @Override
+    protected void setFragmentContent() {
+        ((TextView)getActivity().findViewById(R.id.testTitle)).setText(R.string.bpm);
+        ((ImageView)getView().findViewById(R.id.iconHolder)).setImageResource(R.mipmap.bpm_icon_black);
+        ((EditText)getActivity().findViewById(R.id.testDescription)).setText(R.string.bpmDescription);
     }
 
     @Override
     public void onStart() {
         super.onStart();
-        // Get references
+        // Get References
         TEST_PROGRESS_BAR = getView().findViewById(R.id.test_progress_bar);
 
         if(MainActivity.Instance != null){
-            MainActivity.Instance.changeScreen(R.id.test_footer_fragment, StressFooterRunTest.class, false);
+            MainActivity.Instance.changeScreen(R.id.test_footer_fragment, BpmTestFooterRun.class, false);
         }
-
     }
-
 }

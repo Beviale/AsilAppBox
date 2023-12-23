@@ -10,13 +10,18 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
 
 import uniba.roadhouse.asilappbox.MainActivity;
 import uniba.roadhouse.asilappbox.R;
-import uniba.roadhouse.asilappbox.fragments.stresstest.StressFragment;
-import uniba.roadhouse.asilappbox.fragments.thermometertest.TempFragment;
+import uniba.roadhouse.asilappbox.fragments.bloodpressure.BloodPressureFragmentMain;
+import uniba.roadhouse.asilappbox.fragments.bpm.BpmFragmentMain;
+import uniba.roadhouse.asilappbox.fragments.glucose.GlucoseFragmentMain;
+import uniba.roadhouse.asilappbox.fragments.trembling.TremblingFragmentMain;
+import uniba.roadhouse.asilappbox.fragments.thermometer.TemperatureFragmentMain;
+import uniba.roadhouse.asilappbox.fragments.weight.WeightFragmentMain;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -28,11 +33,11 @@ public class MainPageFragment extends Fragment {
     private Map<String, Class> toolScreenFragments;
 
     private final String TEMPERATURE_SCREEN = "Temperature";
-    private final String CARDIO_SCREEN = "Cardio";
-    private final String STRESS_SCREEN = "Stress";
-    private final String EYE_SCREEN = "Eye";
-    private final String SCALE_SCREEN = "Scale";
-    private final String GLUCOMETER_SCREEN = "Glucometer";
+    private final String BPM_SCREEN = "Bpm";
+    private final String TREMBLING_SCREEN = "Trembling";
+    private final String BLOOD_PRESSURE_SCREEN = "Blood_Pressure";
+    private final String WEIGHT_SCREEN = "Weight";
+    private final String GLUCOSE_SCREEN = "Glucose";
 
     public MainPageFragment() {
         // Required empty public constructor
@@ -67,11 +72,12 @@ public class MainPageFragment extends Fragment {
         super.onViewCreated(view, savedInstanceState);
 
         toolScreenFragments = new HashMap<String, Class>(){{
-            put(TEMPERATURE_SCREEN, TempFragment.class);
-            put(CARDIO_SCREEN, CardioFragment.class);
-            put(STRESS_SCREEN, StressFragment.class);
-            put(SCALE_SCREEN, ScaleFragment.class);
-            put(GLUCOMETER_SCREEN, GlucometerFragment.class);
+            put(TEMPERATURE_SCREEN, TemperatureFragmentMain.class);
+            put(BPM_SCREEN, BpmFragmentMain.class);
+            put(TREMBLING_SCREEN, TremblingFragmentMain.class);
+            put(BLOOD_PRESSURE_SCREEN, BloodPressureFragmentMain.class);
+            put(WEIGHT_SCREEN, WeightFragmentMain.class);
+            put(GLUCOSE_SCREEN, GlucoseFragmentMain.class);
         }};
 
     }
@@ -93,11 +99,21 @@ public class MainPageFragment extends Fragment {
 
     private void setButtonListeners(){
         getView().findViewById(R.id.temperature_btn).setOnClickListener(v -> changeScreen(this.TEMPERATURE_SCREEN));
-        getView().findViewById(R.id.cardio_btn).setOnClickListener(v -> changeScreen(this.CARDIO_SCREEN));
-        getView().findViewById(R.id.stress_btn).setOnClickListener(v -> changeScreen(this.STRESS_SCREEN));
-        //getView().findViewById(R.id.eye_btn).setOnClickListener(v -> changeScreen(this.EYE_SCREEN));
-        getView().findViewById(R.id.scale_btn).setOnClickListener(v -> changeScreen(this.SCALE_SCREEN));
-        getView().findViewById(R.id.glucometer_btn).setOnClickListener(v -> changeScreen(this.GLUCOMETER_SCREEN));
+        getView().findViewById(R.id.bpm_btn).setOnClickListener(v -> changeScreen(this.BPM_SCREEN));
+        getView().findViewById(R.id.trembling_btn).setOnClickListener(v -> changeScreen(this.TREMBLING_SCREEN));
+        getView().findViewById(R.id.blood_pressure_btn).setOnClickListener(v -> changeScreen(this.BLOOD_PRESSURE_SCREEN));
+        getView().findViewById(R.id.weight_btn).setOnClickListener(v -> changeScreen(this.WEIGHT_SCREEN));
+        getView().findViewById(R.id.glucose_btn).setOnClickListener(v -> changeScreen(this.GLUCOSE_SCREEN));
+
+        // Bottone per chiudere la Box
+        getView().findViewById(R.id.closeBoxBtn).setOnClickListener(v -> {
+            try {
+                MainActivity.Instance.closeServerSocket();
+            } catch (IOException e) {
+                throw new RuntimeException(e);
+            }
+            MainActivity.Instance.finish();
+        });
     }
 
     private void changeScreen(String screen) {
