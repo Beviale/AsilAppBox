@@ -1,6 +1,4 @@
 <resources>
-    <string name="app_name">AsilAppBox</string>
-    <string name="homeMenuScreen">AsilApp Box</string>
 
     <!-- STRUMENTISTICA & DESCRIZIONI -->
     <string name="glucose">Glucometer</string>
@@ -13,7 +11,7 @@
     <string name="glucoseDescription">
         The following test aims at measuring the glucose level in the bloodstream (simulated).
         Before continuing on with the test we please ask you to correctly wear the tools provided inside the box.
-        After exactly 5 seconds from the start of the test you will feels a light vibration that will indicate the end of the test. You can also verify the test progress from the progress bar that will appear once you run the test.
+        After exactly 5 seconds from the start of the test you will feel a light vibration that will indicate the end of the test. You can also verify the test progress from the progress bar that will appear once you run the test.
         If you notice that you made an involuntary movement that compromised the test we invite you to re-run it before sending the results to the main application.
     </string>
     <string name="weightDescription">
@@ -29,7 +27,7 @@
         If you notice that you made an involuntary movement that compromised the test we invite you to re-run it before sending the results to the main application.
     </string>
     <string name="tremblingDescription">
-        The following test aims at verifying the stress/shock status of the patient measuring the avility to hold the device still.
+        The following test aims at verifying the stress/shock status of the patient measuring the ability to hold the device still.
         After pressing the run test button we please ask you to keep the device in your hand and try, as much as possible, to hold it still.
         After exactly 5 seconds from the start of the test you will feels a light vibration that will indicate the end of the test. You can also verify the test progress from the progress bar that will appear once you run the test.
         If you notice that you made an involuntary movement that compromised the test we invite you to re-run it before sending the results to the main application.

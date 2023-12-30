@@ -12,6 +12,12 @@ import uniba.roadhouse.asilappbox.utils.TipoMisurazioneEnum;
 
 public abstract class BaseFooterFragment extends Fragment {
 
+    /**
+     * Metodo usato per il cambio di schermata (Fragment). In quanto FooterFragment imposto di default un Bundle da comunicare
+     * al Fragment dei risultati così da poter eventualmente inviare i dati al client.
+     * @param tipoMisurazione
+     * @param resultDataInString
+     */
     protected void changeScreen(TipoMisurazioneEnum tipoMisurazione, String resultDataInString){
         if(MainActivity.Instance != null){
             // Creo un bundle per il passaggio dati

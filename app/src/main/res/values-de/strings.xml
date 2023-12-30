@@ -1,0 +1,61 @@
+<resources>
+
+    <!-- STRUMENTISTICA & DESCRIZIONI -->
+    <string name="glucose">Blutzuckermessgerät</string>
+    <string name="weight">Waage</string>
+    <string name="bpm">Puls Test</string>
+    <string name="trembling">Zittern</string>
+    <string name="bloodPressure">Blutdruck</string>
+    <string name="temperature">Thermometer</string>
+
+    <string name="glucoseDescription">
+        Der folgende Test zielt darauf ab, den Glukosespiegel im Blut zu messen (simuliert).
+        Bevor Sie mit dem Test fortfahren, bitten wir Sie, die im Kasten bereitgestellten Werkzeuge korrekt zu tragen.
+        Genau 5 Sekunden nach Beginn des Tests spüren Sie eine leichte Vibration, die das Ende des Tests anzeigt. Sie können auch den Fortschritt des Tests über die Fortschrittsanzeige verfolgen, die angezeigt wird, wenn Sie den Test starten.
+        Wenn Sie feststellen, dass Sie eine unbeabsichtigte Bewegung gemacht haben, die den Test beeinträchtigt hat, bitten wir Sie, ihn erneut auszuführen, bevor Sie die Ergebnisse an die Hauptanwendung senden.
+    </string>
+    <string name="weightDescription">
+        Der folgende Test zielt darauf ab, das Körpergewicht des Patienten zu messen (simuliert).
+        Bevor Sie mit dem Test fortfahren, bitten wir Sie, sich auszuziehen und/oder auf das Tragen von Schuhen oder schwerer Kleidung zu verzichten, die das Ergebnis beeinflussen können.
+        Genau 5 Sekunden nach Beginn des Tests spüren Sie eine leichte Vibration, die das Ende des Tests anzeigt. Sie können auch den Fortschritt des Tests über die Fortschrittsanzeige verfolgen, die angezeigt wird, wenn Sie den Test starten.
+        Wenn Sie feststellen, dass Sie eine unbeabsichtigte Bewegung gemacht haben, die den Test beeinträchtigt hat, bitten wir Sie, ihn erneut auszuführen, bevor Sie die Ergebnisse an die Hauptanwendung senden.
+    </string>
+    <string name="bpmDescription">
+        Der folgende Test zielt darauf ab, die Herzschläge pro Minute des Patienten zu messen (simuliert).
+        Bevor Sie mit dem Test fortfahren, bitten wir Sie, die im Kasten bereitgestellten Werkzeuge korrekt zu tragen und abrupte Bewegungen zu vermeiden.
+        Genau 5 Sekunden nach Beginn des Tests spüren Sie eine leichte Vibration, die das Ende des Tests anzeigt. Sie können auch den Fortschritt des Tests über die Fortschrittsanzeige verfolgen, die angezeigt wird, wenn Sie den Test starten.
+        Wenn Sie feststellen, dass Sie eine unbeabsichtigte Bewegung gemacht haben, die den Test beeinträchtigt hat, bitten wir Sie, ihn erneut auszuführen, bevor Sie die Ergebnisse an die Hauptanwendung senden.
+    </string>
+    <string name="tremblingDescription">
+        Der folgende Test zielt darauf ab, den Stress-/Schockzustand des Patienten zu überprüfen, indem die Fähigkeit gemessen wird, das Gerät ruhig zu halten.
+        Nach dem Drücken der Schaltfläche "Test ausführen" bitten wir Sie, das Gerät so ruhig wie möglich in der Hand zu halten.
+        Genau 5 Sekunden nach Beginn des Tests spüren Sie eine leichte Vibration, die das Ende des Tests anzeigt. Sie können auch den Fortschritt des Tests über die Fortschrittsanzeige verfolgen, die angezeigt wird, wenn Sie den Test starten.
+        Wenn Sie feststellen, dass Sie eine unbeabsichtigte Bewegung gemacht haben, die den Test beeinträchtigt hat, bitten wir Sie, ihn erneut auszuführen, bevor Sie die Ergebnisse an die Hauptanwendung senden.
+    </string>
+    <string name="bloodPressureDescription">
+        Der folgende Test zielt darauf ab, den systolischen (maximalen) und diastolischen (minimalen) Blutdruck des Patienten zu messen (simuliert).
+        Bevor Sie mit dem Test fortfahren, bitten wir Sie, die im Kasten bereitgestellten Werkzeuge korrekt zu tragen und scharfe Bewegungen zu vermeiden.
+        Genau 5 Sekunden nach Beginn des Tests spüren Sie eine leichte Vibration, die das Ende des Tests anzeigt. Sie können auch den Fortschritt des Tests über die Fortschrittsanzeige verfolgen, die angezeigt wird, wenn Sie den Test starten.
+        Wenn Sie feststellen, dass Sie eine unbeabsichtigte Bewegung gemacht haben, die den Test beeinträchtigt hat, bitten wir Sie, ihn erneut auszuführen, bevor Sie die Ergebnisse an die Hauptanwendung senden.
+    </string>
+    <string name="temperatureDescription">#TO-DO di Simone</string>
+
+    <string name="resultSentMsg">Ergebnisse an den Client gesendet</string>
+
+    <!-- BOTTONI -->
+    <string name="closeBox">Schliesse die Box</string>
+    <string name="runTestButtonLabel">Test starten</string>
+    <string name="testRunningButtonLable">Test läuft...</string>
+    <string name="confirmTestResultButtonLabel">Daten senden</string>
+    <string name="cancelTestResultButtonLabel">Test wiederholen</string>
+    <string name="waitingForClient">Warten auf einen Klienten...</string>
+
+    <!-- PERMISSIONS -->
+    <string name="permission_needed">Berechtigungen erforderlich</string>
+    <string name="bt_permission_rationale">
+        Bluetooth ist notwendig, um AsilApp mit AsilAppBox zu verbinden.
+        Das Verweigern dieser Berechtigung gewährt keinen Zugriff auf die in dieser App enthaltenen Werkzeuge und beendet sie daher.
+        Nur vom Klienten bestätigte Daten werden an das verbundene Gerät gesendet.
+    </string>
+
+</resources>

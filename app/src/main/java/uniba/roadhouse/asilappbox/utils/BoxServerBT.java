@@ -33,6 +33,7 @@ public class BoxServerBT extends Thread {
     private InputStream inputStream;
 
     public BoxServerBT() {
+
         // Use a temporary object that is later assigned to serverSocket
         // because serverSocket is final.
          BluetoothServerSocket tmp = null;

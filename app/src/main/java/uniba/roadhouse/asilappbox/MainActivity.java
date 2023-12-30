@@ -39,6 +39,7 @@ public class MainActivity extends AppCompatActivity {
     private final int REQUEST_BT_PERMISSION = 1;
     private boolean permissionChecked = false;
 
+    /** Launcher per la richiesta dei permessi Bluetooth */
     private ActivityResultLauncher<String[]> requestPermissionLauncher = registerForActivityResult(
             new ActivityResultContracts.RequestMultiplePermissions(),
             result -> {
@@ -55,6 +56,7 @@ public class MainActivity extends AppCompatActivity {
             }
     );
 
+    /** Launcher per la verifica dell'attivazione del Bluetooth */
     private ActivityResultLauncher<Intent> bluetoothEnableResult = registerForActivityResult(
             new ActivityResultContracts.StartActivityForResult(),
             (ActivityResultCallback<ActivityResult>) result -> {
@@ -69,6 +71,7 @@ public class MainActivity extends AppCompatActivity {
                 }
             });
 
+    /** Launcher per la verifica del cambiamento dello stato del Bluetooth */
     private final BroadcastReceiver bluetoothStateChangedReceiver = new BroadcastReceiver() {
 
         @Override
@@ -98,6 +101,7 @@ public class MainActivity extends AppCompatActivity {
         }
     };
 
+    /** Launcher per la verifica della visibilità del dispositivo mediante Bluetooth */
     private ActivityResultLauncher<Intent> bluetoothVisibilityResult = registerForActivityResult(
             new ActivityResultContracts.StartActivityForResult(),
             (ActivityResultCallback<ActivityResult>) result -> {
