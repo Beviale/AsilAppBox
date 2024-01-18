@@ -38,7 +38,11 @@
         After exactly 5 seconds from the start of the test you will feels a light vibration that will indicate the end of the test. You can also verify the test progress from the progress bar that will appear once you run the test.
         If you notice that you made an involuntary movement that compromised the test we invite you to re-run it before sending the results to the main application.
     </string>
-    <string name="temperatureDescription">#TO-DO di Simone</string>
+    <string name="temperatureDescription">
+        The following test aims to measure the simulated body temperature of the patient. Before pressing the button to start the test, please position the device on a part of the body near the proximity sensor. During the test, it is advisable to avoid moving the smartphone away from the body to ensure accurate measurement.
+        Exactly 5 seconds after starting, you will feel a slight vibration indicating the end of the test. You can also monitor the progress through the convenient progress bar that will appear below once the test is initiated.
+        If you realize that you have unintentionally made movements, we encourage you to rerun the test before submitting the results to the main application.
+    </string>
 
     <string name="resultSentMsg">Results sent to client</string>
 

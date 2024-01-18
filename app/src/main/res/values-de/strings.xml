@@ -38,7 +38,11 @@
         Genau 5 Sekunden nach Beginn des Tests spüren Sie eine leichte Vibration, die das Ende des Tests anzeigt. Sie können auch den Fortschritt des Tests über die Fortschrittsanzeige verfolgen, die angezeigt wird, wenn Sie den Test starten.
         Wenn Sie feststellen, dass Sie eine unbeabsichtigte Bewegung gemacht haben, die den Test beeinträchtigt hat, bitten wir Sie, ihn erneut auszuführen, bevor Sie die Ergebnisse an die Hauptanwendung senden.
     </string>
-    <string name="temperatureDescription">#TO-DO di Simone</string>
+    <string name="temperatureDescription">
+        Der folgende Test zielt darauf ab, die simulierten Körpertemperaturen des Patienten zu messen. Bevor Sie die Taste zum Starten des Tests drücken, platzieren Sie das Gerät bitte an einem Körperteil in der Nähe des Annäherungssensors. Während des Tests ist es ratsam, das Smartphone nicht vom Körper zu entfernen, um eine genaue Messung zu gewährleisten.
+        Genau 5 Sekunden nach dem Start werden Sie eine leichte Vibration spüren, die das Ende des Tests anzeigt. Sie können auch den Fortschritt über die praktische Fortschrittsleiste verfolgen, die erscheint, sobald der Test gestartet ist.
+        Wenn Sie feststellen, dass Sie unbeabsichtigt Bewegungen gemacht haben, bitten wir Sie, den Test erneut durchzuführen, bevor Sie die Ergebnisse an die Hauptanwendung senden.
+    </string>
 
     <string name="resultSentMsg">Ergebnisse an den Client gesendet</string>
 

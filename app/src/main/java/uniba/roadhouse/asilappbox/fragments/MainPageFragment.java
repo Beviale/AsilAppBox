@@ -20,7 +20,7 @@ import uniba.roadhouse.asilappbox.fragments.bloodpressure.BloodPressureFragmentM
 import uniba.roadhouse.asilappbox.fragments.bpm.BpmFragmentMain;
 import uniba.roadhouse.asilappbox.fragments.glucose.GlucoseFragmentMain;
 import uniba.roadhouse.asilappbox.fragments.trembling.TremblingFragmentMain;
-import uniba.roadhouse.asilappbox.fragments.thermometer.TemperatureFragmentMain;
+import uniba.roadhouse.asilappbox.fragments.thermometer.ThermometerFragmentMain;
 import uniba.roadhouse.asilappbox.fragments.weight.WeightFragmentMain;
 
 /**
@@ -72,7 +72,7 @@ public class MainPageFragment extends Fragment {
         super.onViewCreated(view, savedInstanceState);
 
         toolScreenFragments = new HashMap<String, Class>(){{
-            put(TEMPERATURE_SCREEN, TemperatureFragmentMain.class);
+            put(TEMPERATURE_SCREEN, ThermometerFragmentMain.class);
             put(BPM_SCREEN, BpmFragmentMain.class);
             put(TREMBLING_SCREEN, TremblingFragmentMain.class);
             put(BLOOD_PRESSURE_SCREEN, BloodPressureFragmentMain.class);

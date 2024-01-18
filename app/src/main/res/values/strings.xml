@@ -41,7 +41,12 @@
         Dopo esattamente 5 secondi dall\'avvio percepirà una leggera vibrazione che le indicherà la fine del test. Può anche verificare il progresso dello stesso dalla comoda barra di progresso che apparirà di seguito una volta avviato il test.
         Qual ora si rendesse conto di aver involontariamente compiuto movimenti la invitiamo a ri-eseguire il test prima di inviare i risultati all\'applicazione principale.
     </string>
-    <string name="temperatureDescription">Questa è la descrizione della termometro, utile a misurare la temperatura corporea di una persona</string>
+    <string name="temperatureDescription">
+        Il seguente test mira a misurare la temperatura corporea del paziente (simulato).
+        Prima di premere il tasto per l\'avvio del test la preghiamo di posizionare il dispositivo su una parte del corpo presso il sensore di prossimità, durante l\'esecuzione del test è consigliato di evitare di allontare lo smarthphone dal corpo al fine di una misurazione corretta.
+        Dopo esattamente 5 secondi dall\'avvio percepirà una leggera vibrazione che le indicherà la fine del test. Può anche verificare il progresso dello stesso dalla comoda barra di progresso che apparirà di seguito una volta avviato il test.
+        Qual ora si rendesse conto di aver involontariamente compiuto movimenti la invitiamo a ri-eseguire il test prima di inviare i risultati all\'applicazione principale.
+    </string>
 
     <string name="resultSentMsg">Risultati inviati al client</string>
 

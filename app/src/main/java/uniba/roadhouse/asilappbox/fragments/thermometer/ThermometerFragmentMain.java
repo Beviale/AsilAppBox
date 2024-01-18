@@ -1,12 +1,6 @@
-package uniba.roadhouse.asilappbox.fragments.thermometertest;
+package uniba.roadhouse.asilappbox.fragments.thermometer;
 
 import android.os.Bundle;
-
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
-import androidx.fragment.app.Fragment;
-
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -15,21 +9,17 @@ import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+
 import uniba.roadhouse.asilappbox.MainActivity;
 import uniba.roadhouse.asilappbox.R;
+import uniba.roadhouse.asilappbox.fragments.BaseFragment;
 
-/**
- * A simple {@link Fragment} subclass.
- * Use the {@link TempFragment#newInstance} factory method to
- * create an instance of this fragment.
- */
-public class TempFragment extends Fragment {
-
+public class ThermometerFragmentMain extends BaseFragment {
     protected static ProgressBar TEST_PROGRESS_BAR;
-    protected static Float tempResult = null;
 
-
-    public TempFragment() {
+    public ThermometerFragmentMain() {
         // Required empty public constructor
     }
 
@@ -39,16 +29,15 @@ public class TempFragment extends Fragment {
      *
      * @return A new instance of fragment TempFragment.
      */
-    // TODO: Rename and change types and number of parameters
-    public static TempFragment newInstance() {
-        TempFragment fragment = new TempFragment();
+    public static ThermometerFragmentMain newInstance() {
+        ThermometerFragmentMain fragment = new ThermometerFragmentMain();
         Bundle args = new Bundle();
         fragment.setArguments(args);
         return fragment;
     }
 
     @Override
-    public void onCreate(Bundle savedInstanceState) {
+    public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
     }
 
@@ -57,19 +46,19 @@ public class TempFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_test, container, false);
-
     }
+
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         setFragmentContent();
     }
 
-    private void setFragmentContent() {
-        ((TextView)getView().findViewById(R.id.testTitle)).setText(R.string.temperature);
+    @Override
+    protected void setFragmentContent(){
+        ((TextView)getActivity().findViewById(R.id.testTitle)).setText(R.string.temperature);
         ((ImageView)getView().findViewById(R.id.iconHolder)).setImageResource(R.mipmap.temperature_icon_black);
-        ((EditText)getView().findViewById(R.id.testDescription)).setText(R.string.temperatureDescription);
-
+        ((EditText)getActivity().findViewById(R.id.testDescription)).setText(R.string.temperatureDescription);
     }
 
     @Override
@@ -79,7 +68,7 @@ public class TempFragment extends Fragment {
         TEST_PROGRESS_BAR = getView().findViewById(R.id.test_progress_bar);
 
         if(MainActivity.Instance != null){
-            MainActivity.Instance.changeScreen(R.id.test_footer_fragment, TempFooterRunTest.class, false);
+            MainActivity.Instance.changeScreen(R.id.test_footer_fragment, ThermometerTestFooterRun.class, false);
         }
     }
 }
