@@ -25,8 +25,6 @@ import java.util.Random;
 
 import uniba.roadhouse.asilappbox.MainActivity;
 import uniba.roadhouse.asilappbox.R;
-import uniba.roadhouse.asilappbox.fragments.stresstest.StressFooterResultTest;
-import uniba.roadhouse.asilappbox.fragments.stresstest.StressFragment;
 
 /**
  * A simple {@link Fragment} subclass.

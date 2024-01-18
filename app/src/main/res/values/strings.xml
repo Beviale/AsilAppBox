@@ -14,32 +14,32 @@
         Il seguente test mira a misurare il livello di glucosio nel sangue (simulato).
         Prima di pemere il tasto per l\'avvio del test la preghiamo di indossare correttamente la strumentazione fornita all\'interno della scatola.
         Dopo esattamente 5 secondi dall\'avvio percepirà una leggera vibrazione che le indicherà la fine del test. Può anche verificare il progresso dello stesso dalla comoda barra di progresso che apparirà di seguito una volta avviato il test.
-        Qual ora si rendesse conto di aver involontariamente compromesso il test la invitiamo a ri-eseguirlo prima di inviare i risultati all'applicazione principale.
+        Qual ora si rendesse conto di aver involontariamente compromesso il test la invitiamo a ri-eseguirlo prima di inviare i risultati all\'applicazione principale.
     </string>
     <string name="weightDescription">
         Il seguente test mira a misurare il peso corporeo del paziente (simulato).
         Prima di iniziare il test la preghiamo di prepararsi per lo stesso svestendosi e/o evitando di indossare scarpe o indumenti pesanti che possano influire sull\'accuratezza del risultato.
         Inoltre la raccomandiamo di non eseguire il presente test subito dopo i pasti e le consigliamo altresì di eseguirlo di mattina appena dopo essersi svegliato.
         Dopo esattamente 5 secondi dall\'avvio percepirà una leggera vibrazione che le indicherà la fine del test. Può anche verificare il progresso dello stesso dalla comoda barra di progresso che apparirà di seguito una volta avviato il test.
-        Qual ora si rendesse conto di aver involontariamente compromesso il test la invitiamo a ri-eseguirlo prima di inviare i risultati all'applicazione principale.
+        Qual ora si rendesse conto di aver involontariamente compromesso il test la invitiamo a ri-eseguirlo prima di inviare i risultati all\'applicazione principale.
     </string>
     <string name="bpmDescription">
         Il seguente test mira a misurare il battito cardiaco del paziente (simulato).
         Prima di premere il tasto per l\'avvio del test la preghiamo di indossare correttamente la strumentazione fornita all\'interno della scatola e di evitare movimenti bruschi.
         Dopo esattamente 5 secondi dall\'avvio percepirà una leggera vibrazione che le indicherà la fine del test. Può anche verificare il progresso dello stesso dalla comoda barra di progresso che apparirà di seguito una volta avviato il test.
-        Qual ora si rendesse conto di aver involontariamente compiuto movimenti la invitiamo a ri-eseguire il test prima di inviare i risultati all'applicazione principale.
+        Qual ora si rendesse conto di aver involontariamente compiuto movimenti la invitiamo a ri-eseguire il test prima di inviare i risultati all\'applicazione principale.
     </string>
     <string name="tremblingDescription">
         Il seguente test mira a verificare lo stato di stress/shock del paziente misurandone la capacità di tenere fermo il dispositivo.
         Dopo aver premuto il tasto per l\'avviso del test la preghiamo di tenere in mano ben saldo il dispositivo e di cercare, per quanto possibile, di muovere la mano il meno possibile.
         Dopo esattamente 5 secondi dall\'avvio percepirà una leggera vibrazione che le indicherà la fine del test. Può anche verificare il progresso dello stesso dalla comoda barra di progresso che apparirà di seguito una volta avviato il test.
-        Qual ora si rendesse conto di aver involontariamente compiuto movimenti la invitiamo a ri-eseguire il test prima di inviare i risultati all'applicazione principale.
+        Qual ora si rendesse conto di aver involontariamente compiuto movimenti la invitiamo a ri-eseguire il test prima di inviare i risultati all\'applicazione principale.
     </string>
     <string name="bloodPressureDescription">
         Il seguente test mira a verificare la pressione sistolica (massima) e diastolica (minima) del paziente (simulato).
         Prima di premere il tasto per l\'avvio del test la preghiamo di indossare correttamente la strumentazione fornita all\'interno della scatola e di evitare movimenti bruschi.
         Dopo esattamente 5 secondi dall\'avvio percepirà una leggera vibrazione che le indicherà la fine del test. Può anche verificare il progresso dello stesso dalla comoda barra di progresso che apparirà di seguito una volta avviato il test.
-        Qual ora si rendesse conto di aver involontariamente compiuto movimenti la invitiamo a ri-eseguire il test prima di inviare i risultati all'applicazione principale.
+        Qual ora si rendesse conto di aver involontariamente compiuto movimenti la invitiamo a ri-eseguire il test prima di inviare i risultati all\'applicazione principale.
     </string>
     <string name="temperatureDescription">Questa è la descrizione della termometro, utile a misurare la temperatura corporea di una persona</string>
 
@@ -55,6 +55,6 @@
 
     <!-- PERMISSIONS -->
     <string name="permission_needed">Permessi necessari</string>
-    <string name="bt_permission_rationale">Il Bluetooth è necessario per connettere AsilApp ad AsilAppBox. Negare il presente permesso non permettere possibile l\'uso degli strumenti inclusi nell\'applicazione e di conseguenza quest ultima verrà terminata. Solo i dati confermati dall'utente verranno inviati al dispositivo connesso.</string>
+    <string name="bt_permission_rationale">Il Bluetooth è necessario per connettere AsilApp ad AsilAppBox. Negare il presente permesso non permettere possibile l\'uso degli strumenti inclusi nell\'applicazione e di conseguenza quest ultima verrà terminata. Solo i dati confermati dall\'utente verranno inviati al dispositivo connesso.</string>
 
 </resources>

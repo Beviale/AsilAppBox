@@ -12,6 +12,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.Toast;
+
 import androidx.fragment.app.Fragment;
 
 import java.util.Random;
@@ -76,6 +78,7 @@ public class BpmTestFooterRun extends BaseFooterFragment {
                 Vibrator vibrator = (Vibrator) getActivity().getSystemService(Context.VIBRATOR_SERVICE);
                 vibrator.vibrate(VibrationEffect.createOneShot(100, VibrationEffect.DEFAULT_AMPLITUDE));
 
+                Toast.makeText(this.getContext(), String.format("%d", this.bpmResult), Toast.LENGTH_LONG).show();
                 changeScreen(TipoMisurazioneEnum.BATTITOCARDIACO, String.valueOf(this.bpmResult));
             }, TEST_DURATION_IN_MS);
 

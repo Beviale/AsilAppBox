@@ -4,6 +4,7 @@ import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
 
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -27,7 +28,7 @@ public class FooterTestResult extends Fragment {
     private Button CONFIRM_BUTTON;
     private Button CANCEL_BUTTON;
     private String tipoMisurazione;
-    private Double resultData;
+    private String resultData;
 
     public FooterTestResult() {
         // Required empty public constructor
@@ -53,7 +54,7 @@ public class FooterTestResult extends Fragment {
         Bundle bundle = getArguments();
         if(bundle!=null){
             this.tipoMisurazione = bundle.getString("TIPO_MISURAZIONE");
-            this.resultData = bundle.getDouble("RESULT_DATA");
+            this.resultData = bundle.getString("RESULT_DATA");
         }
 
         // Inflate the layout for this fragment
@@ -83,6 +84,8 @@ public class FooterTestResult extends Fragment {
     }
 
     private void sendResult() throws IOException {
+        Log.d("RESULT", String.valueOf(this.resultData) + " sent");
+
         MainActivity.Instance.getBoxServerBT().sendData(this.tipoMisurazione, this.resultData);
     }
 

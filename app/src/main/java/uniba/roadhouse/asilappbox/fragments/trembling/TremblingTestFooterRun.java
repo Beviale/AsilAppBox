@@ -14,10 +14,12 @@ import androidx.fragment.app.Fragment;
 import android.os.Handler;
 import android.os.VibrationEffect;
 import android.os.Vibrator;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 
@@ -92,6 +94,8 @@ public class TremblingTestFooterRun extends BaseFooterFragment implements Sensor
                 Vibrator vibrator = (Vibrator) getActivity().getSystemService(Context.VIBRATOR_SERVICE);
                 vibrator.vibrate(VibrationEffect.createOneShot(100, VibrationEffect.DEFAULT_AMPLITUDE));
 
+                Log.d("RESULT", String.valueOf(this.resultData));
+                Toast.makeText(this.getContext(), String.format("%.2f", this.resultData), Toast.LENGTH_LONG).show();
                 changeScreen(TipoMisurazioneEnum.TREMOLIO, String.valueOf(this.resultData));
             }, TEST_DURATION_IN_MS);
 

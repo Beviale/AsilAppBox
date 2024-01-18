@@ -17,7 +17,6 @@ import android.widget.TextView;
 
 import uniba.roadhouse.asilappbox.MainActivity;
 import uniba.roadhouse.asilappbox.R;
-import uniba.roadhouse.asilappbox.fragments.stresstest.StressFooterRunTest;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -67,9 +66,9 @@ public class TempFragment extends Fragment {
     }
 
     private void setFragmentContent() {
-        ((TextView)getView().findViewById(R.id.testTitle)).setText(R.string.tempToolTitle);
-        ((ImageView)getView().findViewById(R.id.iconHolder)).setImageResource(R.mipmap.temp_icon);
-        ((EditText)getView().findViewById(R.id.testDescription)).setText(R.string.tempToolDesc);
+        ((TextView)getView().findViewById(R.id.testTitle)).setText(R.string.temperature);
+        ((ImageView)getView().findViewById(R.id.iconHolder)).setImageResource(R.mipmap.temperature_icon_black);
+        ((EditText)getView().findViewById(R.id.testDescription)).setText(R.string.temperatureDescription);
 
     }
 

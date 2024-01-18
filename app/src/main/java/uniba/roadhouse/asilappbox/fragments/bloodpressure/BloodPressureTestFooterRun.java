@@ -10,6 +10,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.Toast;
 
 import androidx.fragment.app.Fragment;
 
@@ -74,6 +75,7 @@ public class BloodPressureTestFooterRun extends BaseFooterFragment {
                 Vibrator vibrator = (Vibrator) getActivity().getSystemService(Context.VIBRATOR_SERVICE);
                 vibrator.vibrate(VibrationEffect.createOneShot(100, VibrationEffect.DEFAULT_AMPLITUDE));
 
+                Toast.makeText(this.getContext(), String.format("%d/%d", this.systolicBloodPressureResult, this.diastolicBloodPressureResult), Toast.LENGTH_LONG).show();
                 changeScreen(TipoMisurazioneEnum.PRESSIONESANGUIGNA, String.format("%d@%d", this.systolicBloodPressureResult, this.diastolicBloodPressureResult));
             }, TEST_DURATION_IN_MS);
 

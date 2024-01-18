@@ -122,7 +122,7 @@ public class BoxServerBT extends Thread {
      * @param resultData
      * @throws IOException
      */
-    public void sendData(String testName, Double resultData) throws IOException {
+    public void sendData(String testName, String resultData) throws IOException {
         String result = testName + "@" + resultData;
         outputStream.write(result.getBytes());
         Log.d("BLUETOOTH","Dati inviati al client");

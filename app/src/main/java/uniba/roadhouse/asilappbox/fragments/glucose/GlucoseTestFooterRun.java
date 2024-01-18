@@ -10,6 +10,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.Toast;
 
 import androidx.fragment.app.Fragment;
 
@@ -73,6 +74,7 @@ public class GlucoseTestFooterRun extends BaseFooterFragment {
                 Vibrator vibrator = (Vibrator) getActivity().getSystemService(Context.VIBRATOR_SERVICE);
                 vibrator.vibrate(VibrationEffect.createOneShot(100, VibrationEffect.DEFAULT_AMPLITUDE));
 
+                Toast.makeText(this.getContext(), String.format("%d", this.resultData), Toast.LENGTH_LONG).show();
                 changeScreen(TipoMisurazioneEnum.GLUCOSIO, String.valueOf(this.resultData));
             }, TEST_DURATION_IN_MS);
 

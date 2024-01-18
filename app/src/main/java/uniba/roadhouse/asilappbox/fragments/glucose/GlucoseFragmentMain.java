@@ -2,6 +2,8 @@ package uniba.roadhouse.asilappbox.fragments.glucose;
 
 import android.os.Bundle;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
 import android.view.LayoutInflater;
@@ -49,9 +51,15 @@ public class GlucoseFragmentMain extends BaseFragment {
     }
 
     @Override
+    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
+        setFragmentContent();
+    }
+
+    @Override
     protected void setFragmentContent() {
         ((TextView)getActivity().findViewById(R.id.testTitle)).setText(R.string.glucose);
-        ((ImageView)getView().findViewById(R.id.iconHolder)).setImageResource(R.mipmap.glucose_icon_white);
+        ((ImageView)getView().findViewById(R.id.iconHolder)).setImageResource(R.mipmap.glucose_icon_black);
         ((EditText)getActivity().findViewById(R.id.testDescription)).setText(R.string.glucoseDescription);
     }
 
